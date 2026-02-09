@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Selectors</title>
+<style>
+    p{
+        color:blue;
+    }
+    #title{
+        color:red;
+    }
+    .box{
+        background-color: lightgrey;
+        padding: 10px;
+    }
+    h2,h3{
+        color:purple;
+    }
+    *{
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    div p{
+        color:red;
+    }
+    h2+p{
+        color:blue;
+    }
+    h3 ~ p{
+        color:green;
+    }
+    a:hover{
+        color:orange;
+    }
+    p::first-letter{
+        font-size: 2em;
+        color:blue;
+    }
+    input [type="text"]{
+        border: 2px solid blue;
+        padding: 5px;
+    }
+</style>
+</head>
+<body>
+    <h1 id="title">CSS Selectors</h1>
+    <div class="box">
+        <h2>Heading 2</h2>
+        <p>Paragraph 1</p>
+        <h3>Heading 3</h3>
+        <p>Paragraph 2</p>
+        <a href="#">Link</a>
+        <input type="text" placeholder="Text Input">
+    </div>
+</body>
+</html>
