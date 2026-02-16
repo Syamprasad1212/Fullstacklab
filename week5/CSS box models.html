@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS Box Model</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                text-align: center;
+                background-color: #f2f2f2;
+            }
+            .box {
+                width: 300px;
+                border: 10px solid #ff9e01;
+                padding: 30px;
+                margin: 50px auto;
+                font-weight: bold;
+                background-color: #05ffff;
+            }
+            /* labels */
+            label{
+                font-size:14px;
+                margin-top: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h2> CSS box model examples</h2>
+        <div class="box">
+            Blue->Content area
+        </div>
+            <div class="box">
+                Space inside-> Padding(30px)
+            </div>
+            <div class="box">
+                orange line->Border(10px)
+            </div>
+            <div class="box">
+                Space outside-> Margin(50px)
+            </div>
+        </div>
+    </body>
+</html>
