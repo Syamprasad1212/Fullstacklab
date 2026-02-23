@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>Vote Eligibility</title>
+    </head>
+    <body>
+        <h2>Voter Details</h2>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Eligibility</th>
+            </tr>
+            <tr>
+                <td id="nameOutput"></td>
+                <td id="ageOutput"></td>
+                <td id="eligibilityOutput"></td>
+            </tr>
+        </table>
+        <script>
+            let name = prompt("Enter your name:");
+            let age = prompt("Enter your age:");
+            document.getElementById("nameOutput").innerHTML = name;
+            document.getElementById("ageOutput").innerHTML = age;
+            let result;
+            if (age >= 18) {
+                result="Yes Eligible";
+            } else {
+                result="No Not Eligible";
+            }
+            document.getElementById("nameOutput").innerHTML = name;
+            document.getElementById("ageOutput").innerHTML = age;
+            document.getElementById("eligibilityOutput").innerHTML = result;
+        </script>
+    </body>
+</html>
