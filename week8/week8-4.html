@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Object Data Display</title>
+</head>
+<body>
+
+<script>
+
+// Creating object
+let student = {
+    name: "Rahul",
+    age: 21,
+    branch: "CSE"
+};
+
+// for-in loop (object properties)
+document.write("Using for-in loop:<br>");
+for(let key in student)
+{
+    document.write(key + " : " + student[key] + "<br>");
+}
+
+// Convert object values into array
+let values = Object.values(student);
+
+// forEach loop
+document.write("<br>Using forEach loop:<br>");
+values.forEach(function(item){
+    document.write(item + "<br>");
+});
+
+// for-of loop
+document.write("<br>Using for-of loop:<br>");
+for(let value of values)
+{
+    document.write(value + "<br>");
+}
+
+</script>
+
+</body>
+</html>
