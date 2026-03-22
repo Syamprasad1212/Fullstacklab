@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Functions Example</title>
+</head>
+<body>
+
+<script>
+
+// Factorial Function
+function factorial(n) {
+    let fact = 1;
+    for(let i = 1; i <= n; i++) {
+        fact *= i;
+    }
+    document.write("Factorial: " + fact + "<br>");
+}
+
+// Fibonacci Function
+function fibonacci(n) {
+    let a = 0, b = 1, c;
+    document.write("Fibonacci Series: ");
+    for(let i = 1; i <= n; i++) {
+        document.write(a + " ");
+        c = a + b;
+        a = b;
+        b = c;
+    }
+    document.write("<br>");
+}
+
+// Prime Numbers Function
+function prime(n) {
+    document.write("Prime Numbers: ");
+    for(let i = 2; i <= n; i++) {
+        let count = 0;
+        for(let j = 1; j <= i; j++) {
+            if(i % j == 0)
+                count++;
+        }
+        if(count == 2)
+            document.write(i + " ");
+    }
+    document.write("<br>");
+}
+
+// Palindrome Function
+function palindrome(n) {
+    let original = n;
+    let reverse = 0;
+
+    while(n > 0) {
+        reverse = reverse * 10 + (n % 10);
+        n = Math.floor(n / 10);
+    }
+
+    if(original == reverse)
+        document.write("Palindrome Number<br>");
+    else
+        document.write("Not a Palindrome Number<br>");
+}
+
+
+// Example input
+let number = parseInt(prompt("Enter a number:"));
+
+factorial(number);
+fibonacci(number);
+prime(number);
+palindrome(number);
+
+</script>
+
+</body>
+</html>
