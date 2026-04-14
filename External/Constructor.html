@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>User Defined Object Example</title>
+
+<script>
+
+class Student
+{
+    constructor(name, age, course)
+    {
+        this.name = name;
+        this.age = age;
+        this.course = course;
+    }
+
+    // Method
+    displayDetails()
+    {
+        return "Name: " + this.name +
+               "<br>Age: " + this.age +
+               "<br>Course: " + this.course;
+    }
+
+    // Getter
+    get getCourse()
+    {
+        return this.course;
+    }
+
+    // Setter
+    set setCourse(newCourse)
+    {
+        this.course = newCourse;
+    }
+}
+
+function showStudent()
+{
+    let s1 = new Student("Syam", 21, "CSE");
+
+    // Using setter
+    s1.setCourse = "Full Stack Development";
+
+    document.getElementById("result").innerHTML =
+    s1.displayDetails();
+}
+
+</script>
+
+</head>
+
+<body>
+
+<h2>User Defined Object Demonstration</h2>
+
+<button onclick="showStudent()">Show Student Details</button>
+
+<p id="result"></p>
+
+</body>
+</html>
