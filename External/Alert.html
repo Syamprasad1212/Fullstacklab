@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Window Object Example</title>
+
+<script>
+
+function showAlert()
+{
+window.alert("This is an alert message");
+}
+
+function openWindow()
+{
+window.open("https://www.google.com",
+"_blank",
+"width=400,height=300");
+}
+
+function showConfirm()
+{
+let result = window.confirm("Do you want to continue?");
+
+if(result == true)
+document.getElementById("output").innerHTML =
+"You pressed OK";
+else
+document.getElementById("output").innerHTML =
+"You pressed Cancel";
+}
+
+function showPrompt()
+{
+let name = window.prompt("Enter your name:");
+
+document.getElementById("output").innerHTML =
+"Hello " + name;
+}
+
+function showSize()
+{
+document.getElementById("output").innerHTML =
+"Width: " + window.innerWidth +
+"<br>Height: " + window.innerHeight;
+}
+
+</script>
+
+</head>
+
+<body>
+
+<h2 align="center">JavaScript Window Object Demonstration</h2>
+
+<center>
+
+<button onclick="showAlert()">Alert Box</button>
+
+<br><br>
+
+<button onclick="openWindow()">Open New Window</button>
+
+<br><br>
+
+<button onclick="showConfirm()">Confirm Box</button>
+
+<br><br>
+
+<button onclick="showPrompt()">Prompt Box</button>
+
+<br><br>
+
+<button onclick="showSize()">Show Window Size</button>
+
+<p id="output"></p>
+
+</center>
+
+</body>
+</html>
