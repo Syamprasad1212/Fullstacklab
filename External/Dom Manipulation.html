@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>DOM Manipulation Example</title>
+
+<script>
+
+function changeText()
+{
+document.getElementById("para").innerHTML =
+"Paragraph text changed successfully!";
+}
+
+function changeImage()
+{
+document.getElementById("image").src =
+"https://via.placeholder.com/200";
+}
+
+function changeColor()
+{
+document.body.style.backgroundColor = "lightblue";
+}
+
+function changeFont()
+{
+document.getElementById("para").style.fontSize = "24px";
+}
+
+</script>
+
+</head>
+
+<body>
+
+<h2>JavaScript DOM Manipulation Example</h2>
+
+<p id="para">
+This is the original paragraph text.
+</p>
+
+<img id="image"
+src="https://via.placeholder.com/100"
+width="100">
+
+<br><br>
+
+<button onclick="changeText()">Change Text</button>
+
+<button onclick="changeImage()">Change Image</button>
+
+<button onclick="changeColor()">Change Background</button>
+
+<button onclick="changeFont()">Change Font Size</button>
+
+</body>
+</html>
