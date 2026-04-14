@@ -1,0 +1,26 @@
+<html>
+<head>
+    <title>Window</title>
+    <script>
+        function showalert(){
+            window.alert("This is an alert message!");
+        }
+        function opennewwindow(){
+            window.open("https://www.google.com", "_blank");
+        }
+        function showdimensions(){
+            let width = window.innerWidth;
+            let height=window.innerHeight;
+            document.getElementById("output").innerHTML = "Width: " + width + "px, Height: " + height + "px";
+        }
+        </script>
+    </head>
+    <body>
+        <h1>Window Object Example</h1>
+        <button onclick="showalert()">Show Alert</button>
+        <button onclick="opennewwindow()">Open New Window</button>
+        <button onclick="showdimensions()">Show Window Dimensions</button>
+        <p id="output"></p>
+    </body>
+
+</html>

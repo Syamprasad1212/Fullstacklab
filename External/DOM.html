@@ -1,0 +1,20 @@
+<html><head>
+<title>DOM</title>
+<script>
+function content(){
+	document.getElementById("para").innerHTML="Paragraph content changed";
+	document.getElementById("image").src="itachi.jpg";
+}
+</script>
+</head>
+<body>
+<p id="para"> this is main paragraph</p>
+<img id="image"
+src="itachi.jpg"
+width="100"
+height="100">
+<br><br>
+<button onclick="content()">
+click here to change</button>
+</body>
+</html>
