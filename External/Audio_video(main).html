@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Audio and Video Controls Example</title>
+
+<script>
+
+function playVideo()
+{
+document.getElementById("myVideo").play();
+}
+
+function pauseVideo()
+{
+document.getElementById("myVideo").pause();
+}
+
+function forwardVideo()
+{
+document.getElementById("myVideo").currentTime += 10;
+}
+
+function backwardVideo()
+{
+document.getElementById("myVideo").currentTime -= 10;
+}
+
+function showTime()
+{
+let t = document.getElementById("myVideo").currentTime;
+
+document.getElementById("time").innerHTML =
+"Current Time: " + t.toFixed(2) + " seconds";
+}
+
+</script>
+
+</head>
+
+<body>
+
+<h2 align="center">HTML5 Audio and Video Example</h2>
+
+<h3>Audio Player</h3>
+
+<audio controls autoplay muted loop>
+<source src="audio.mp3" type="audio/mpeg">
+Your browser does not support audio
+</audio>
+
+
+<h3>Video Player</h3>
+
+<video id="myVideo" width="400" controls autoplay muted loop>
+<source src="video.mp4" type="video/mp4">
+Your browser does not support video
+</video>
+
+<br><br>
+
+<button onclick="playVideo()">Play</button>
+
+<button onclick="pauseVideo()">Pause</button>
+
+<button onclick="forwardVideo()">Forward 10s</button>
+
+<button onclick="backwardVideo()">Backward 10s</button>
+
+<button onclick="showTime()">Show Current Time</button>
+
+<p id="time"></p>
+
+</body>
+</html>
