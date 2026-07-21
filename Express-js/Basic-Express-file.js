@@ -11,3 +11,7 @@ app.listen(PORT, (error) =>{
         console.log("Error occurred, server can't start", error);
     }
 );
+/*The server has been created and run successfully.
+If the server does not start, check the error message carefully and resolve the issue.
+After a successful run, opening http://localhost:3000 in the browser will display “Cannot GET /”.
+This happens because no routes have been configured in the application yet.*/
